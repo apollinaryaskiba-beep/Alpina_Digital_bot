@@ -18,8 +18,8 @@
 1. Клонируйте репозиторий: `git clone https://github.com/apollinaryaskiba-beep/Alpina_Digital_bot`
 2. Установите зависимости: `pip install -r requirements.txt`
 3. Примените миграции: `python manage.py migrate`
-4. Загрузите демонстрационные данные (обязательно!): python manage.py loaddata initial_data
-5. Запустите сервер: python manage.py runserver
+4. Загрузите демонстрационные данные (обязательно!): `python manage.py loaddata initial_data`
+5. Запустите сервер: `python manage.py runserver`
 
 ## Тестирование API
 После запуска сервера доступны следующие эндпоинты:
@@ -39,5 +39,5 @@
 *   **Бот "Альпина.Лекторий"** — система рекомендаций экспертных вебинаров.
 *   **Бот "HR"** — помощник для новых сотрудников.
 
-> **Примечание:** Чтобы загрузить эти данные в свою базу, выполните команду:  
-> `python manage.py loaddata initial_data`
+**Примечание:** 
+Чтобы загрузить эти данные в свою базу, выполните команду: `python manage.py loaddata initial_data`
