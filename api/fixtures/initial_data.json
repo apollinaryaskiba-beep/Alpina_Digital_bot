@@ -1,0 +1,105 @@
+[
+{
+    "model": "api.gptbot",
+    "pk": 1,
+    "fields": {
+        "name": "Alpina_Reader",
+        "description": "Поиск книг",
+        "created_at": "2026-03-12T11:09:59.089Z"
+    }
+},
+{
+    "model": "api.gptbot",
+    "pk": 4,
+    "fields": {
+        "name": "Alpina_Welcome",
+        "description": "Помогает новичку освоиться в компании Alpina Digital",
+        "created_at": "2026-03-12T11:56:30.655Z"
+    }
+},
+{
+    "model": "api.gptbot",
+    "pk": 6,
+    "fields": {
+        "name": "Alpina_Webinar",
+        "description": "Подбирает вебинар под конкретный запрос пользователя",
+        "created_at": "2026-03-12T12:05:28.625Z"
+    }
+},
+{
+    "model": "api.scenario",
+    "pk": 1,
+    "fields": {
+        "bot": 1,
+        "name": "Подбор литературы",
+        "is_active": true
+    }
+},
+{
+    "model": "api.scenario",
+    "pk": 3,
+    "fields": {
+        "bot": 4,
+        "name": "Первый рабочий день",
+        "is_active": true
+    }
+},
+{
+    "model": "api.scenario",
+    "pk": 4,
+    "fields": {
+        "bot": 6,
+        "name": "Подбор экспертного контента",
+        "is_active": true
+    }
+},
+{
+    "model": "api.step",
+    "pk": 1,
+    "fields": {
+        "scenario": 1,
+        "order": 1,
+        "config": {
+            "prompt": "Ты эксперт библиотеки Альпина. Спроси у пользователя, какие навыки он хочет развить (лидерство, тайм-менеджмент или переговоры) и предложи 3 книги.",
+            "model": "gpt-4"
+        }
+    }
+},
+{
+    "model": "api.step",
+    "pk": 3,
+    "fields": {
+        "scenario": 1,
+        "order": 2,
+        "config": {
+            "prompt": "Пользователь выбрал книгу. Составь краткий план из 5 ключевых тезисов этой книги.",
+            "model": "gpt-4"
+        }
+    }
+},
+{
+    "model": "api.step",
+    "pk": 4,
+    "fields": {
+        "scenario": 3,
+        "order": 1,
+        "config": {
+            "prompt": "Расскажи пользователю о ценностях компании Альпина (интеллект, качество, развитие) и ответь на вопросы по графику работы.",
+            "model": "gpt-3.5-turbo"
+        }
+    }
+},
+{
+    "model": "api.step",
+    "pk": 5,
+    "fields": {
+        "scenario": 4,
+        "order": 1,
+        "config": {
+            "model": "gpt-4-turbo",
+            "prompt": "Ты — ведущих бизнес-спикер Альпина.Лекторий. Твоя задача — на основе запроса пользователя порекомендовать подходящую тему выступления. Напиши: 'Для глубокого погружения в тему [Тема] рекомендую посмотреть наши последние вебинары'.",
+            "temperature": 0.6
+        }
+    }
+}
+]
